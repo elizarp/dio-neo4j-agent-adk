@@ -1,5 +1,7 @@
 # DIO - Google ADK - Neo4j
 
+[Slides](2026_DIO_Agentes.pdf)
+
 # Passo a passo
 
 ## Pre-Requisitos
