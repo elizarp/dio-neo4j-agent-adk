@@ -1,0 +1,31 @@
+sources:
+  neo4j-conn:
+    kind: "neo4j"
+    uri: "bolt://44.200.67.89:7687"
+    user: "neo4j"
+    password: "latitudes-varieties-grinders"
+    database: "neo4j"
+
+tools:
+  get_schema:
+    kind: neo4j-schema
+    source: neo4j-conn
+    description: |
+      Use this tool to get the full schema of the Fraud Detection database.
+      This provides information on all available node labels, relationships, and the properties on each.
+      This tool takes no parameters.
+    # Optional configuration to cache the schema for 2 hours
+    # cacheExpireMinutes: 120
+  
+  query_neo4j:
+    kind: neo4j-execute-cypher
+    source: neo4j-conn
+    readOnly: true
+    description: |
+      Use this tool to execute a Cypher query against the Neo4j database.
+      Only read-only queries are allowed.
+      Takes a single 'cypher' parameter containing the full query string.
+      Example:
+      {{
+          "cypher": "MATCH (m:Movie {title: 'The Matrix'}) RETURN m.released"
+      }}
