@@ -56,6 +56,8 @@ adk web
 
 [AI Studio - API Key Google](https://aistudio.google.com/)
 
+[Fraud Detection Repository](https://github.com/neo4j-graph-examples/fraud-detection)
+
 ## MCP Servers
 [https://mcpservers.org/](https://mcpservers.org/)
 
